@@ -1,0 +1,30 @@
+public class BS {  
+    static void bs(int[] arr) {  //static method so as we dont needto create its object
+        int n = arr.length;     // initialise the length of an array
+        int temp = 0;            // temp variable for swapping purpose
+         for(int i=0;i<n;i++){  
+                 for(int j=1; j< (n-i);j++){  
+                          if(arr[j-1] > arr[j]){  
+                          // swap array if condition satisfies
+                               
+                                 temp=arr[j-1];  
+                                 arr[j-1]=arr[j];  
+                                 arr[j]=temp;  
+                         }  
+                 }  
+         }  }
+    public static void main(String[] args) {  
+                int arr[] ={3,60,35,2,45,320,5}; //array initialise
+                System.out.println("Array Before Bubble Sort");  //print statement
+                for(int i=0;i<arr.length; i++){  
+                        System.out.print(arr[i]+ " ");  
+                }     
+                bubbleSort(arr);   // call static methods 
+                 
+                System.out.println("Array After Bubble Sort");  
+                for(int i=0;i<arr.length;i++){  
+                        System.out.print(arr[i]+" ");  
+                }  
+   
+        }  
+}  
